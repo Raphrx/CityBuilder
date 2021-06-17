@@ -8,6 +8,6 @@ public class Plains extends Type{
 
         this.setRessources("Plains");
         this.setTypeName("Plains");
-        this.setTypeColor(Color.GREEN.darker());
+        this.setTypeColor(new Color(102, 255, 102));
     }
 }

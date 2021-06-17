@@ -10,7 +10,7 @@ import Buildings.*;
 public class Cell {
     
     private Type type;
-    private String[] ListOfTypes = {"Plains", "Desert"};
+    private String[] ListOfTypes = {"Plains", "Desert", "Forest", "Montains", "Ocean"};
     private Building buildingOnCell;
     public Cell(){
 
@@ -30,7 +30,15 @@ public class Cell {
             case 1:
                 this.type = new Desert();
                 break;
-            
+            case 2:
+                this.type = new Forest();
+                break;
+            case 3:
+                this.type = new Montains();
+                break;
+            case 4:
+                this.type = new Ocean();
+                break;
             default:
                 break;
         }
