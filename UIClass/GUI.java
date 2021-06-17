@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 public class GUI extends JFrame{
     
+    public MapGui mapgui;
     public GUI(){
 
         // Panel maître
@@ -19,8 +20,8 @@ public class GUI extends JFrame{
 
         //Panel centre
         JPanel panelMilieu = new JPanel(new GridLayout());
-        MapGui mapgui = new MapGui();
-        panelMilieu.add(mapgui);
+        this.mapgui = new MapGui();
+        panelMilieu.add(this.mapgui);
         windowPanel.add(panelMilieu, BorderLayout.CENTER);
 
         // bottom
@@ -29,5 +30,9 @@ public class GUI extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
+    }
+
+    public MapGui getMapGui(){
+        return this.mapgui;
     }
 }

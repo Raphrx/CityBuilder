@@ -5,9 +5,9 @@ import java.awt.*;
 public abstract class Type {
     
     // attributes
-    private String typeName;
-    private String ressources;
-    private Color typeColor;
+    protected String typeName;
+    protected String ressources;
+    protected Color typeColor;
 
     // methods
 

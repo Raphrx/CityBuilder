@@ -5,21 +5,23 @@ import java.util.Random;
 import java.util.Random.*;
 
 import Types.*;
-//import Buildings.*;
+import Buildings.*;
 
 public class Cell {
     
     private Type type;
-    private String[] ListOfTypes = {"Plains"};
+    private String[] ListOfTypes = {"Plains", "Desert"};
+    private Building buildingOnCell;
     public Cell(){
 
         randomType();
+        this.buildingOnCell = new EmptyBuilding();
     }
 
     //Methods
     public void randomType(){
         Random r = new Random();
-        int randomNumber = r.nextInt(ListOfTypes.length + 1);
+        int randomNumber = r.nextInt(ListOfTypes.length);
 
         switch (randomNumber) {
             case 0:
@@ -31,6 +33,32 @@ public class Cell {
             
             default:
                 break;
+        }
+    }
+
+    public void destroyArea(){
+
+    }
+
+    public void build(String nameOfTheBuilding){
+        switch (nameOfTheBuilding) {
+            case "Farm":
+                this.buildingOnCell = new Farm();
+                break;
+            case "Empty":
+                this.buildingOnCell = new EmptyBuilding();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public boolean isBuildingOnCell(){
+        if(this.buildingOnCell.getBuildingName() == "Empty"){
+            return false;
+        }
+        else{
+            return true;
         }
     }
     //geters and seters 

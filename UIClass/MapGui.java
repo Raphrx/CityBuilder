@@ -33,9 +33,26 @@ public class MapGui extends JPanel{
     public void paintMap(){
         for (int i = 0; i < this.mapLength; i++) {
             for (int j = 0; j < this.mapLength; j++) {
-                Color color = this.map.getCell(i, j).getType().getTypeColor();
-                array_of_SlotButton.get(i).get(j).setBackground(color);
+                if (this.map.getCell(i, j).isBuildingOnCell()){
+                    array_of_SlotButton.get(i).get(j).setIcon(resizeIcon(new ImageIcon("ressources/farmIcon3.png"), array_of_SlotButton.get(i).get(j).getWidth(), array_of_SlotButton.get(i).get(j).getHeight()));
+                    array_of_SlotButton.get(i).get(j).setBackground(Color.WHITE);
+                }
+                else{
+                    Color color = this.map.getCell(i, j).getType().getTypeColor();
+                    array_of_SlotButton.get(i).get(j).setBackground(color);
+                }
+                
             }
         }
+    }
+
+    private static Icon resizeIcon(ImageIcon icon, int resizedWidth, int resizedHeight) {
+        Image img = icon.getImage();  
+        Image resizedImage = img.getScaledInstance(resizedWidth, resizedHeight,  java.awt.Image.SCALE_SMOOTH);  
+        return new ImageIcon(resizedImage);
+    }
+
+    public Map getMap(){
+        return this.map;
     }
 }
