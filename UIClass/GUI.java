@@ -1,6 +1,5 @@
+package UIClass;
 import javax.swing.*;
-
-import UIClass.MapGui;
 
 import java.awt.*;
 import java.awt.event.*;

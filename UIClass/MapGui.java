@@ -1,7 +1,7 @@
 package UIClass;
 import javax.swing.*;
 
-import ;
+import Models.*;
 
 import java.awt.*;
 import java.util.ArrayList;
