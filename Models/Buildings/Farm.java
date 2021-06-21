@@ -1,4 +1,4 @@
-package Buildings;
+package Models.Buildings;
 
 public class Farm extends Building{
     

@@ -1,4 +1,4 @@
-package Types;
+package Models.Types;
 
 import java.awt.Color;
 

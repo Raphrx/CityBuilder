@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Random.*;
 
-import Types.*;
-import Buildings.*;
+import Models.Buildings.*;
+import Models.Types.*;
 
 public class Cell {
     

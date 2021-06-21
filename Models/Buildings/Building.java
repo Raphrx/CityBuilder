@@ -1,4 +1,4 @@
-package Buildings;
+package Models.Buildings;
 
 import java.awt.Color;
 
